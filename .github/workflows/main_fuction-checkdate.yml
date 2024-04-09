@@ -30,6 +30,10 @@ jobs:
         run: |
           pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
           npm install
+          npm install express
+          npm install express-fileupload
+          npm install body-parser
+          npm install @azure/cosmos
           npm run build --if-present
           npm run test --if-present
           popd
