@@ -1,4 +1,5 @@
 module.exports = async function (context, myTimer) {
+	const { CosmosClient } = require("@azure/cosmos");
     var timeStamp = new Date().toISOString();
     
     if (myTimer.isPastDue)
@@ -8,7 +9,7 @@ module.exports = async function (context, myTimer) {
     context.log('JavaScript timer trigger function ran!', timeStamp);   
 	
 	        const endpoint = "https://project-rrj-database.documents.azure.com:443/";
-        const key = "";
+        const key = "cqEkzC1PmhJuTDG9XMgicZbx5PZcwSwPpA06T2rwnFKKzZbp73UtecVBylBkH3kSSwos0JwpY9G7ACDbLcPwAA==";
         const databaseId = 'Eventos';
         const containerId = 'Evento';
 
